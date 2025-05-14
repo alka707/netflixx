@@ -1,0 +1,500 @@
+<html>
+
+<head>
+    <meta name="viewport"
+    content="width=device-width,initial-scale=1.0">
+    <title>
+        NETFLIX
+    </title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .head {
+        opacity: inherit;
+        width: 100vw;
+            height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+            background-image:url("asset/backg.jpeg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-blend-mode: soft-light;
+            background-blend-mode: darken;
+            background: radial-gradient(cover,rgba(0,0,0,0.7));
+        }
+        .box{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100vw;
+        
+            background-color:rgba(0,0,0,0.8);
+            position: absolute;
+        }
+        .header{
+            display: flex;
+            height: 35vh;
+            width: 100vw;
+            
+        }
+        .name{
+            height: 12vh;
+            width: 68vw;
+            padding: 0.65vh;
+        }
+        .overlay{
+            height: 10vh;
+            width: 100vw;
+        }
+        .img{
+            padding: 3vh 16vh;
+            height: 7vh;
+            
+        }
+        .lang{
+            width:12vw;
+           
+        }
+        .select{
+            padding: 0.8vh;
+            text-align: center;
+            font-size: 14px;
+            margin: 5vh;
+            width: 10.9vw;
+            border-radius: 6px;
+            height: 5.1vh;
+            background-color: transparent;
+            color: aliceblue;
+            border: 2px solid rgb(54, 53, 53) ;
+        }
+
+        .option{
+            color: black;
+        }
+        .sign{
+            
+            width: 7vw;
+        }
+        .button{
+            padding: 0px 0;
+            margin: 5vh;
+            width: 6vw;
+            height: 5.1vh;
+            border-radius: 6px;
+            background-color: #E50914;
+            border: none;
+            color: aliceblue;
+        }
+        .mai{
+         
+            height: 30vh;
+            color: aliceblue;
+            text-align: center;
+            font-size: 5vh;
+            text-emphasis-style: 7px;
+            font-weight: 500;
+        font-family: Arial, Helvetica, sans-serif;
+          margin-top: 1.9vh;
+          margin-bottom: 0.3vh;
+          letter-spacing: 0.05vh;
+          word-spacing: 0.1vh;
+          
+        }
+        .email{
+            font-family: Arial, Helvetica, sans-serif;
+            color: aliceblue;
+            text-align: center;
+            font-weight: 348;
+            height: 4vh;}
+            
+           
+            .lower{
+                height: 20vh;
+                display: flex;
+               flex-direction: row;
+                flex-wrap: wrap;
+              justify-content: center;
+             
+                gap: 1.4vh;
+            }
+           
+        
+        .mail{
+          
+            height: 9vh;
+            padding-right: 20vh;
+            background-color: rgba(255,255,255,0.2);
+           
+           
+            border:0.1px solid gray;
+            border-radius: 1vh;
+           
+            padding-left: 2vh;
+            color: rgba(27, 26, 26, 0.2);
+            
+        }
+        .mail::placeholder{
+            color:rgba(212, 208, 208, 0.897);
+            font-size: 2.6vh;
+        }
+        .Get{
+           
+           padding: 20px;
+            height: 9vh;
+            border-radius: 1vh;
+            font-size: 3vh;
+            color: aliceblue;
+            background-color: #E50914;
+            border: none;
+        }
+        
+        .seprate{
+            background-color:rgb(1, 0, 8);
+            width: 100%;
+            
+            height: 10%;
+            opacity: 0.9;
+            border-top: 3px solid #ce0e48;
+            border-radius: 100vh/7vh;
+            box-shadow: 5px 5px 15px rgb(0, 2, 8);
+        }
+        .cover{
+            height: 4vh;
+            opacity: 0.7;
+            background-color:rgb(1, 0, 8); 
+            margin-top: 3vh;
+        
+        }
+        .second{
+            width: 100vw;
+            height: 150vh;
+            background-color: rgb(1, 0, 8);
+            display: flex;
+            flex-direction: column;
+        }
+        .heading{
+            padding-top: 20px;
+            height: 5vh;
+            color: rgb(255, 255, 255);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding-left: 18vh;
+            letter-spacing: 0.1vh;
+            
+
+        }
+        .movie{
+          
+           
+            
+          overflow: hidden;
+          display: flex;
+           
+            height: 45vh;
+          justify-content: center;
+     gap:3vh;
+     
+            
+            
+
+        }
+       
+        
+        
+        #left{
+            margin-top: 9vh;
+           height: 17vh;
+            pointer-events: all;
+            cursor: pointer;
+            color: gray;
+            background-color: transparent;
+            font-size: 5vh;
+            border: none;
+            z-index: 1;
+            border-radius: 6px;
+            margin-left: 2vh;
+            transition: background-color 0.3s ease;
+        }
+        #left:hover{
+            background-color: black;
+        }
+        #trend{
+           
+            height: 100vh;
+           
+            display: flex;
+            width: 80vw;
+            
+            overflow-x: auto;
+            scroll-behavior: smooth;
+           gap: 40px;
+          
+            white-space: nowrap;
+           
+           
+            
+        }
+        #trend::-webkit-scrollbar {
+            display: none;
+        }
+        .scroll{
+           
+            height: 270px;
+            transform: transform 0.5 s;
+            border-radius: 8px;
+            
+            
+            text-align: center;
+        }
+        .scroll:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+
+        }
+        .heading2{
+           
+            font-size: 23px;
+            height: 5vh;
+            color: rgb(255, 255, 255);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding-left: 18vh;
+            letter-spacing: 0.1vh;
+        }
+        .reason{
+           
+            height: 50vh;
+            display: flex;
+     justify-content: center;
+
+     padding-left:4vh;
+        padding-right: 16vh;
+        padding-top: 2vh;
+        padding-bottom: 0;
+         gap: 20px;
+        }
+        .here{
+            border-radius:3vh;
+            height: 50vh;
+            width: 15vw;
+            background: rgba(147,112,219,0.2);
+            border: 0.7px solid rgba(147,112,219,0.4);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+            backdrop-filter:blur(50px);
+            color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 1.5vh;
+            padding-top: 3vh;
+            padding-right: 3vh;
+            padding-bottom: 0%;
+           
+        }
+        .write{
+            
+            height: 40vh;
+            
+
+            font-size: 15px;
+            color: white;
+            opacity: 0.7;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+          word-spacing: 0.7px;
+          line-height: 1.3;
+        }
+        .last{
+            height: 20vh;
+            width: 100vw;
+        }
+        .end{
+            height: 100vh;
+            color: gray;
+            background-color: rgb(1, 0, 8);
+        }
+        @media (max-width:600px) {
+            .lower{
+                display: flex;
+                flex-direction: column;
+                width: 50vh;
+                justify-content: center;
+                margin-left: 60pxx;
+                padding-left: 90px;
+            }
+            .movie{
+                width: 100vw;
+            }
+            .trend{
+                justify-content: flex-start;
+            }
+            .scroll{
+
+                width: 20vh;
+            }
+            .heading{
+                margin-left: 3px;
+                padding-left: 25px;
+            }
+            .heading2{
+                padding-left: 25px ;
+            }
+            .reason{
+               height: 65vh;
+                display: flex;
+                width: 100vh;
+                padding-left: 0%;
+                margin-top: 60px;
+                padding-top: 40px;
+                flex-direction: column;
+                padding-bottom: 0;
+            }
+            .here{
+                padding-bottom: 20px;
+                height: 14vh;
+                width: 90vw;
+
+            }
+           
+        }
+            
+        
+        
+        
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <div class="box">
+        <div class="header">
+       <div class="name">
+        <img src="asset/name.jpeg" class="img">
+       </div> 
+       <div class="lang">
+        <select id="option" class="select">
+            <option class="option"><b>English</b></option>
+            <option class="option"><b>Hindi</b></option>
+
+        </select>
+       </div>
+        <div class="sign">
+            <button class="button"><b>Sign In</b></button>
+
+        </div>
+      
+</div>
+<br><br><br>
+<div class="mai">
+    <h2><b>Unlimited movies,TV<br>
+    shows and more</b></h2>
+    <h6>starts at ₹149.Cancle at any time</h6>
+</div><br><br>
+<div class="email">
+    <b>Ready to watch? Enter your email to create or restart your membership.</b>
+</div>
+    <br>
+    <div class="lower">
+
+    <input type="text" placeholder="Email address" class="mail">
+   <button class="Get"><b>Get Started ></b></button>
+    
+
+</div>
+<br><br><br><br>
+<div class="seprate">
+    <div class="cover"></div>
+</div>
+</div>
+</div>
+
+<div class="second">
+<br>
+<div class="heading">
+    <h2>Trending Now</h2>
+</div>
+<br>
+<div class="movie" id="mo">
+    
+    <button id="left" onclick="scrollTrendRight()">&#9664;</button>
+    <div id="trend">
+        
+   <div><img src="asset/chhava.jpeg" class="scroll"></div>
+   <div><img src="asset/ugly.jpeg" class="scroll"></div>
+   <div><img src="asset/jewel.jpeg" class="scroll"></div>
+    <div><img src="asset/pushpa.jpeg" class="scroll"></div>
+   <div> <img src="asset/court.jpeg" class="scroll"></div>
+   <div><img src="asset/life.jpeg" class="scroll"></div>
+  <div> <img src="asset/deva.jpeg" class="scroll"></div>
+    <div><img src="asset/dragon.jpeg" class="scroll"></div>
+    <div><img src="asset/mad.jpeg" class="scroll"></div>
+  <div> <img src="asset/royal.jpeg" class="scroll"></div>
+  
+    </div>
+    <button id="left" onclick="scrollTrendLeft()" >&#9654;</button>
+
+</div>
+<br><br>
+<div class="heading2">
+    More reasons to join
+</div>
+<div class="reason">
+    <div class="here"><h2>Enjoy on your TV<br></h2><br>
+   <div class="write"> Watch on smart TVs,PlayStation,Xbox,<br>Chromecast,Apple,TV,Bluray players and more.
+   </div></div>
+    <div class="here"><h2>Download your shows to watch offline</h2><br><div class="write">Save your favourites 
+        easily and always have something to watch.</div></div>
+    <div class="here"><h2>Watch everywhere</h2><br><div class="write">Stream unlimited movies and 
+        TV shows on your phone, tablet, laptop and TV.</div></div>
+    <div class="here"><h2>Create profiles for kids</h2><br><div class="write">Send kids on adventures with 
+        their favourite characters in a space made just for them — free with your membership.</div></div>
+
+</div>
+<div  class="last">
+
+</div>
+
+</div>
+<div class="end">
+    <br><br><br><br><br><br><br><br><br>
+Questions? Call 000-800-919-1743<br>
+<u>FAQ<br>
+Help Centre<br>
+Account<br>
+Media Centre<br>
+Investor Relations<br>
+Jobs<br>
+Ways to Watch<br>
+Terms of Use<br>
+Privacy<br>
+Cookie Preferences<br>
+Corporate Information<br>
+Contact Us<br>
+Speed Test<br>
+Legal Notices<br>
+Only on Netflix</u><br><br><br><br><br>
+This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href="#">Learn  more.</a>
+
+</div>
+
+
+   
+<script>
+    function scrollTrendLeft(){
+  const container =
+  document.getElementById("trend");
+  
+  container.scrollBy({left: -900,
+    behavior:"smooth"});}
+
+    function scrollTrendRight(){
+  const container =
+  document.getElementById("trend");
+  
+  container.scrollBy({left: 900,
+    behavior:"smooth"});}
+  </script>
+</body>
+
+</html>
